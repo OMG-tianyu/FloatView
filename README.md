@@ -7,7 +7,6 @@
     在AppDelegate.m中的代理方法中，输入[self.window makeKeyAndVisible];
     
     //添加floatView主View（添加FloatView需要在 makeKeyAndVisible 之后）
-    
     /**
      *添加纯色主View
      *参数说明：
@@ -16,7 +15,6 @@
      *color：主View颜色，传入nil默认半透明蓝色
      *inView：需要将floatView添加在这个View中，传入nil默认添加在window上，可以跨View、ViewController
      */
-     
     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(bounds.size.width - 100 , bounds.size.height - 150) color:nil inView:nil];
     
     /**
@@ -25,8 +23,8 @@
      *image：主View图片，传入nil默认无图片
      *其余与纯色相同
      */
-     
     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(SCREEN_WIDTH - 100 ,SCREEN_HEIGHT - 150) image:[UIImage imageNamed:@"图片名字"] inView:nil];
+    
     
     //设置代理（代理方法调用在最下方）
     self.floatView.delegate = self;
@@ -35,8 +33,8 @@
     self.floatView.label.font = [UIFont systemFontOfSize:15];
     self.floatView.label.textColor = [UIColor blackColor];
     
-    //添加子View
     
+    //添加子View
     /**
      *添加纯色子View
      *参数说明：
@@ -45,7 +43,6 @@
      *titleColor：字体颜色，传入nil默认黑色
      *tag：子View所对应的tag，获取子View点击事件、删除子View时需要
      */
-     
     //[self.floatView addSubFloatViewWithColor:[UIColor yellowColor] title:@"这里是测试文字" titleColor:nil tag:888];
     
     /**
@@ -54,8 +51,8 @@
      *Image：子View图片，传入nil默认透明
      *其余同纯色
      */
-     
     //[self.floatView addSubFloatViewWithImage:[UIImage imageNamed:@"图片名字"] title:nil titleColor:nil tag:889];
+     
      
     //开始浮标转动动画
     [self.floatView startProgressAnimation];
@@ -65,16 +62,19 @@
     [self.floatView startBitAnimation];
     //停止跳动动画
     [self.floatView stopBitAnimation];
+    
     //显示浮窗
     self.floatView.hidden = NO;
     //隐藏浮窗
     self.floatView.hidden = YES;
+    
     //垂直展开优先
     self.floatView.subViewShowType = SubViewShowTypeVertical;
     //四散展开优先
     self.floatView.subViewShowType = SubViewShowTypeDisperse;
     //水平展开优先
     self.floatView.subViewShowType = SubViewShowTypeHorizontal;
+    
     
     //FloatView代理方法
     #pragma mark - FloatViewDelegate
