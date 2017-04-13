@@ -78,4 +78,4 @@
     - (void)floatViewClicked{}
     //点击子View的代理方法
     -(void)floatViewSubViewClickedWithTag:(NSInteger)tag{}
-    ![image](file:///Users/mac/Desktop/看.gif )   
+  
