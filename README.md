@@ -24,12 +24,12 @@
      *image：主View图片，传入nil默认无图片
      *其余与纯色相同
      */
-     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(SCREEN_WIDTH - 100 ,SCREEN_HEIGHT - 150) image:[UIImage imageNamed:@"圆环2"] inView:nil];
+     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(SCREEN_WIDTH - 100 ,SCREEN_HEIGHT - 150) image:[UIImage imageNamed:@"图片名字"] inView:nil];
     //设置代理（代理方法调用在最下方）
     self.floatView.delegate = self;
     
     //主View文字(主View Label暴露，可自行更改，默认不限行数，黑色8号字体，内容水平居中)
-    self.floatView.label.text = @"客服";
+    self.floatView.label.text = @"要输入的文字";
     self.floatView.label.font = [UIFont systemFontOfSize:15];
     self.floatView.label.textColor = [UIColor blackColor];
     
@@ -43,7 +43,7 @@
      *titleColor：字体颜色，传入nil默认黑色
      *tag：子View所对应的tag，获取子View点击事件、删除子View时需要
      */
-    //[self.floatView addSubFloatViewWithColor:[UIColor yellowColor] title:@"tag : 888" titleColor:nil tag:888];
+    //[self.floatView addSubFloatViewWithColor:[UIColor yellowColor] title:@"这里是测试文字" titleColor:nil tag:888];
     
     /**
      *添加图片子View
@@ -51,7 +51,7 @@
      *Image：子View图片，传入nil默认透明
      *其余同纯色
      */
-     //[self.floatView addSubFloatViewWithImage:[UIImage imageNamed:@"qq"] title:nil titleColor:nil tag:889];
+     //[self.floatView addSubFloatViewWithImage:[UIImage imageNamed:@"图片名字"] title:nil titleColor:nil tag:889];
      
     //开始浮标转动动画
     [self.floatView startProgressAnimation];
