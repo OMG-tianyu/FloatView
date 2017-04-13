@@ -2,7 +2,7 @@
 封装的类似iPhone的AssistiveTouch功能的悬浮窗，你可以定义悬浮窗主视图的各个参数（背景图片，半径），子视图的参数以及展开类型。还包括转动动画和跳动动画
 ### 使用方法<br />
 
-    把文件拖入项目中，导入头文件#import "FloatView.h"
+    把文件拖入项目中，导入头文件#import "FloatView.h"
     
     在AppDelegate.m中的代理方法中，输入[self.window makeKeyAndVisible];
     
@@ -16,7 +16,8 @@
      *color：主View颜色，传入nil默认半透明蓝色
      *inView：需要将floatView添加在这个View中，传入nil默认添加在window上，可以跨View、ViewController
      */
-     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(bounds.size.width - 100 , bounds.size.height - 150) color:nil inView:nil];
+     
+    //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(bounds.size.width - 100 , bounds.size.height - 150) color:nil inView:nil];
     
     /**
      *添加图片主View
@@ -24,12 +25,13 @@
      *image：主View图片，传入nil默认无图片
      *其余与纯色相同
      */
-     //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(SCREEN_WIDTH - 100 ,SCREEN_HEIGHT - 150) image:[UIImage imageNamed:@"图片名字"] inView:nil];
+     
+    //self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(SCREEN_WIDTH - 100 ,SCREEN_HEIGHT - 150) image:[UIImage imageNamed:@"图片名字"] inView:nil];
+    
     //设置代理（代理方法调用在最下方）
     self.floatView.delegate = self;
-    
     //主View文字(主View Label暴露，可自行更改，默认不限行数，黑色8号字体，内容水平居中)
-    self.floatView.label.text = @"要输入的文字";
+    self.floatView.label.text = @"要输入的文字";
     self.floatView.label.font = [UIFont systemFontOfSize:15];
     self.floatView.label.textColor = [UIColor blackColor];
     
@@ -43,7 +45,8 @@
      *titleColor：字体颜色，传入nil默认黑色
      *tag：子View所对应的tag，获取子View点击事件、删除子View时需要
      */
-    //[self.floatView addSubFloatViewWithColor:[UIColor yellowColor] title:@"这里是测试文字" titleColor:nil tag:888];
+     
+    //[self.floatView addSubFloatViewWithColor:[UIColor yellowColor] title:@"这里是测试文字" titleColor:nil tag:888];
     
     /**
      *添加图片子View
@@ -51,7 +54,8 @@
      *Image：子View图片，传入nil默认透明
      *其余同纯色
      */
-     //[self.floatView addSubFloatViewWithImage:[UIImage imageNamed:@"图片名字"] title:nil titleColor:nil tag:889];
+     
+    //[self.floatView addSubFloatViewWithImage:[UIImage imageNamed:@"图片名字"] title:nil titleColor:nil tag:889];
      
     //开始浮标转动动画
     [self.floatView startProgressAnimation];
